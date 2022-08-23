@@ -21,8 +21,13 @@ def main():
             
             photos = curr_update.message.photo
             if photos:
-                photo = photos[-1].file_id
-                bot.send_photo(chat_id, photo)
+                file_id = photos[-1].file_id
+                bot.send_photo(chat_id, file_id)
+
+            document = curr_update.message.document
+            if document:
+                file_id = document.file_id
+                bot.send_document(chat_id, file_id)
             
             last_update_id = curr_update_id
 
