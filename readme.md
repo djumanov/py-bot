@@ -7,3 +7,9 @@
 - echo send_document
 - echo send_video
 - echo send_voice
+
+## random-animal
+
+- random dog
+- random cat
+
