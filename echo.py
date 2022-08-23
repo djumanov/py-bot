@@ -4,4 +4,6 @@ import os
 TOKEN = os.environ['TOKEN']
 
 bot = telegram.Bot(token=TOKEN)
-print(bot.getMe())
+updates = bot.getUpdates()
+for update in updates:
+    print(update)
