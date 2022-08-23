@@ -2,7 +2,7 @@ import telegram
 import os
 
 TOKEN = os.environ['TOKEN']
-bot = telegram.Bot(token=TOKEN)
+bot   = telegram.Bot(token=TOKEN)
 
 def main():
     last_update    = bot.getUpdates()[-1]
