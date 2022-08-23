@@ -28,6 +28,16 @@ def main():
             if document:
                 file_id = document.file_id
                 bot.send_document(chat_id, file_id)
+
+            video = curr_update.message.video
+            if video:
+                file_id = video.file_id
+                bot.send_video(chat_id, file_id)
+
+            voice = curr_update.message.voice
+            if voice:
+                file_id = voice.file_id
+                bot.send_voice(chat_id, file_id)
             
             last_update_id = curr_update_id
 
