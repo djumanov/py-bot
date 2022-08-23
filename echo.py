@@ -14,10 +14,15 @@ def main():
 
         if last_update_id != curr_update_id:
             chat_id = curr_update.message.from_user.id
-            text    = curr_update.message.text
 
+            text    = curr_update.message.text
             if text:
                 bot.send_message(chat_id, text)
+            
+            photos = curr_update.message.photo
+            if photos:
+                photo = photos[-1].file_id
+                bot.send_photo(chat_id, photo)
             
             last_update_id = curr_update_id
 
