@@ -2,4 +2,6 @@ import telegram
 import os
 
 TOKEN = os.environ['TOKEN']
-print(TOKEN)
+
+bot = telegram.Bot(token=TOKEN)
+print(bot.getMe())
