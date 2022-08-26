@@ -44,7 +44,7 @@ def start(update: Update, context: CallbackContext):
             }
             json_data['result'].append(new_user)
 
-            str_data = json.dumps(json_data, input=4)
+            str_data = json.dumps(json_data, indent=4)
             with open(file='db.json', mode='w') as r_db:
                 r_db.write(str_data)
     else:
